@@ -1,1 +1,1 @@
-# MFCC-implemented-in-muiti-languages
+# MFCC-implemented-in-multi-languages
