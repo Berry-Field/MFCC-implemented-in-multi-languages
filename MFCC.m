@@ -21,7 +21,8 @@ s=y'.*hamming(200);
 s=y'.*hamming(200); 
 t=abs(fft(s)); 
 t=t.^2; 
-c=dctcoef*log(bank*t(1:101)); %通过Mel滤波器、对数运算和DCT
+c=log(bank*t(1:101));
+mfcc=dctcoef*log(bank*t(1:101)); %閫氳繃Mel婊ゆ尝鍣ㄣ�佸鏁拌繍绠楀拰DCT
 m(i,:)=c'; 
 end
 m=m';
