@@ -67,9 +67,11 @@ for p in range(1,15):
     h = np.linspace(0, 39, num=40)
     c=np.cos((2*h+1)*p*np.pi/(2*24))    
     dctcoef[p-1,::]=c
+
+mfcc=np.dot(dctcoef,(filter_banks.T))
     
 plt.subplot(2,1,1)
-plt.imshow(np.dot(dctcoef,(filter_banks.T)),cmap = plt.cm.hot,aspect='auto')
+plt.imshow(filter_banks.T,cmap = plt.cm.hot,aspect='auto')
 plt.subplot(2,1,2)
 plt.plot(signal)
 plt.show()
